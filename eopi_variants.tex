@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper, margin=0.8in]{geometry}
+
+\usepackage{xcolor}
+\usepackage{minted}
+\definecolor{LightGray}{gray}{0.9}
+
+\begin{document}
+%\title{Solutions for EoPI Variant Problems}
+%\maketitle
+%\author{He Chen}
+\begin{titlepage}
+	\begin{center}
+    \line(1,0){400}\\
+    [0.65cm]
+	\huge{\bfseries Solutions for EoPI Variant Problems}\\
+	\line(1,0){400}\\	
+	\textsc{\LARGE \today}\\
+	[5.5cm]     
+	\end{center}
+\end{titlepage}
+
+\section*{Chapter 5}
+\subsection*{5.11 Rectangle Intersection}
+\subsubsection*{Variant 1}
+Given four points in the plane, how would check if they are the vertices of a rectangle?\\
+
+\noindent\textbf{Solution:} solution
+
+\subsubsection*{Variant 2}
+How would check if two rectangles, not necessarily aligned with the \textit{X} and \textit{Y} axes, intersect?\\
+
+\noindent\textbf{Solution:} solution
+
+\section*{Chapter 6}
+\subsection*{6.4 Advancing Through an Array}
+\subsubsection*{Variant 1}
+Write a program to compute the minimum number of steps needed to advance to the last location.\\
+
+\noindent\textbf{Solution:} Iterate through the array and track the furthest index we know we can advance to at each iteration. The minimum number of steps needed is the number of iterations to have the furthest index at or past the last location.
+\inputminted[frame=lines, framesep=2mm, baselinestretch=1.2, bgcolor=LightGray, breaklines, fontsize=\small, breaksymbol=,]{c++}{chapter6/6.4v1.cpp}
+
+\end{document}
