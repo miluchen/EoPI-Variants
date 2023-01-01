@@ -43,5 +43,14 @@ Write a program to compute the minimum number of steps needed to advance to the 
 
 \noindent\textbf{Solution:} Iterate through the array and track the furthest index we know we can advance to at each iteration. The minimum number of steps needed is the number of iterations to have the furthest index at or past the last location.
 \inputminted[frame=lines, framesep=2mm, baselinestretch=1.2, bgcolor=LightGray, breaklines, fontsize=\small, breaksymbol=,]{c++}{chapter6/6.4v1.cpp}
+The time complexity is $O(n)$, and the space complexity is $O(1)$.
+
+\subsection*{6.6 Delete Duplicates From a Sorted Array}
+\subsubsection*{Variant 1}
+Write a program which takes as input a sorted array $A$ of integers and a positive integer $m$, and updates $A$ so that if $x$ appears $m$ times in $A$ it appears exactly $min(2, m)$ times in $A$. The update to $A$ should be performed in one pass, and no additional storage may be allocated.\\
+
+\noindent\textbf{Solution:} Since the array is sorted, repeated elements must appear one-after-another. We iterate through the array and keep track of the count of repeated integers. At each iteration, if the current integer is different from the previous one, we need to determine how many times the previous integer should repeat in updated array $A$ and fill it in accordingly.
+\inputminted[frame=lines, framesep=2mm, baselinestretch=1.2, bgcolor=LightGray, breaklines, fontsize=\small, breaksymbol=,]{c++}{chapter6/6.6v1.cpp}
+The time complexity is $O(n)$, and the space complexity is $O(1)$.
 
 \end{document}
